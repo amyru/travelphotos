@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :pins
+
   devise_for :admins
   root 'pages#home'
   get 'about' => 'pages#about'
