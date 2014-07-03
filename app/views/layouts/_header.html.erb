@@ -19,6 +19,7 @@
         <li><%= link_to "Photography", photography_path %></li>
         <li><%= link_to "Blog", @ext_path="http://mycabinpressure.blogspot.ae/"%></li>
         <% if admin_signed_in? %>
+          <li><%= link_to 'New Pin', new_pin_path %></li>
           <li><%= link_to "Log Out", destroy_admin_session_path, method: :delete %></li>
           <li><%= link_to "Account Settings", edit_admin_registration_path %></li>
         <% end %>
