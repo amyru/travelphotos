@@ -10,15 +10,6 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *[class^="icon-"], [class*=" icon-"] {
-display: inline;
-width: auto;
-height: auto;
-line-height: inherit;
-vertical-align: baseline;
-background-image: none;
-background-position: 0% 0%;
-background-repeat: repeat;
  *= require_tree .
  *= require_self
  *= require 'masonry/transitions'
