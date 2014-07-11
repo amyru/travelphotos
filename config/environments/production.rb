@@ -94,5 +94,5 @@ Rails.application.configure do
     }
   }
 
-  config.assets.precompile += %w( *.js *.css *.eot *.woff *.ttf *.svg )
+  config.assets.precompile += %w( '.woff', '.eot', '.svg', '.ttf' )
 end
