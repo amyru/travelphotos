@@ -1,16 +1,18 @@
+<h1><span class="glyphicon glyphicon-globe"></span> 24 Hour Explorer</h1>
+<p2>A collection of photos from exploring various cities in 24 hours at a time around the world</p2>
+<p><%= link_to "My Blog", "http://mycabinpressure.blogspot.ae/" %>.</p>
+
 <div id="pins" class="transitions-enabled">
   <% @pins.each do |pin| %>
-    <div class="box panel-default">  
-      <%= image_tag pin.image.url(:medium) %>
-      <div class="panel-body">
-        <%= pin.description %>
-        <%= link_to 'Show', pin %>
+    <div class="box">  
+      <%= link_to image_tag(pin.image.url(:medium)), pin %>       
         <% if pin.admin == current_admin %>
-          <%= link_to 'Edit', edit_pin_path(pin) %>
-          <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <div class="actions">
+            <%= link_to 'Edit', edit_pin_path(pin) %>
+            <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
         <% end %>
-      </div>
-    </div>  
+      </div>  
   <% end %>
 </div>
 
